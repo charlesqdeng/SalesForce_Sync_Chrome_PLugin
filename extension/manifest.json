@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Salesforce Report to Sheets",
+  "version": "1.0.0",
+  "description": "Export a Salesforce report to Google Sheets and sync edited cells back.",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0n/JZXkJhTO/rNh/UEIi1O5jed6jk+HN81lgJD1NZjL1beGPpg+laDb8OKtUggiussf5cFxispx9hc2VF6sHJtQLKeiNJK9ti9IClNjrOZ2M8z2NTgNSf51g/hQyl++TFiQsRk9/yZpoRRXk4x2qDKixSGq3VAuqjpOpE+Mtam9IL1ny4e4PEFF0Wk3Ag6StMdeFylRTlngjfs3Zvk6/ctYJC6tmggZIoEOZAGQIUpULMfb3xljKSN2n4DDrOd3IaBTsI2pnXrJcXzQZoMAxLFOFl/NEUfxPfHXf5fS4+CYOBC0nVcBz+2kpkQ4nZWjX7DS0uPvpIkp/PPNe6zZ06QIDAQAB",
+  "action": {
+    "default_title": "Salesforce ↔ Google Sheets",
+    "default_popup": "popup.html"
+  },
+  "permissions": ["storage"],
+  "host_permissions": ["http://127.0.0.1:8765/*"],
+  "minimum_chrome_version": "102"
+}

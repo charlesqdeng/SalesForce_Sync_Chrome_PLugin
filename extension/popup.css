@@ -1,0 +1,132 @@
+:root {
+  color-scheme: light;
+  font: 13px/1.45 Arial, sans-serif;
+}
+
+body {
+  width: 360px;
+  margin: 0;
+  color: #172b4d;
+  background: #f7f9fc;
+}
+
+main {
+  padding: 18px;
+}
+
+h1 {
+  margin: 0 0 16px;
+  font-size: 17px;
+}
+
+label {
+  display: block;
+  margin: 12px 0 5px;
+  font-weight: 600;
+}
+
+input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 9px;
+  border: 1px solid #aeb8c4;
+  border-radius: 4px;
+  color: inherit;
+  background: white;
+}
+
+button {
+  width: 100%;
+  min-height: 36px;
+  margin-top: 10px;
+  padding: 8px;
+  border: 0;
+  border-radius: 4px;
+  color: white;
+  background: #1769aa;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.url-row {
+  display: flex;
+  gap: 6px;
+}
+
+.url-row input {
+  flex: 1;
+  min-width: 0;
+}
+
+
+button.secondary {
+  color: #1769aa;
+  background: #e7eff8;
+}
+
+button.success {
+  background: #1e7b3c;
+}
+
+button.success:hover {
+  background: #186632;
+}
+
+button.danger {
+  color: #b42318;
+  background: #fdecea;
+}
+
+button.save {
+  width: auto;
+  min-height: 0;
+  margin-top: 0;
+  padding: 0 14px;
+  border: 1px solid #1769aa;
+  color: #1769aa;
+  background: white;
+}
+
+button.save:hover {
+  color: white;
+  background: #1769aa;
+}
+
+button:disabled {
+  cursor: wait;
+  opacity: 0.6;
+}
+
+.actions {
+  margin-top: 10px;
+  padding-top: 12px;
+  border-top: 1px solid #d6dde5;
+}
+
+.hint {
+  margin: 12px 0 4px;
+  color: #526579;
+  font-size: 12px;
+}
+
+output {
+  display: block;
+  margin-top: 12px;
+  font-weight: 600;
+}
+
+output.error {
+  color: #b42318;
+}
+
+pre {
+  max-height: 180px;
+  overflow: auto;
+  padding: 9px;
+  border-radius: 4px;
+  color: #344054;
+  background: #eef2f6;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font: 11px/1.4 ui-monospace, monospace;
+}

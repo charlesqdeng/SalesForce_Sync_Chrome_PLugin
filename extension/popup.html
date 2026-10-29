@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Salesforce ↔ Google Sheets</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main>
+      <h1>Salesforce ↔ Google Sheets</h1>
+      <form class="url-field" data-key="reportUrl">
+        <label for="report-url">Salesforce report URL</label>
+        <div class="url-row">
+          <input id="report-url" type="url" required
+                 placeholder="https://example.lightning.force.com/lightning/r/Report/00O…/view">
+          <button type="submit" class="secondary save">Save</button>
+        </div>
+      </form>
+      <form class="url-field" data-key="sheetUrl">
+        <label for="sheet-url">Default Google Sheet URL</label>
+        <div class="url-row">
+          <input id="sheet-url" type="url" required
+                 placeholder="https://docs.google.com/spreadsheets/d/…/edit">
+          <button type="submit" class="secondary save">Save</button>
+        </div>
+      </form>
+
+      <div class="actions">
+        <button id="export" type="button">Export report to sheet</button>
+        <button id="sync" type="button" class="success">Sync sheet edits to Salesforce</button>
+        <button id="reexport" type="button" class="danger">Clear sheet and re-export</button>
+      </div>
+      <p class="hint">Only changed cells are synced. Conflicts are skipped; cleared cells are left unchanged.</p>
+      <output id="status" role="status" aria-live="polite"></output>
+      <pre id="details" hidden></pre>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
