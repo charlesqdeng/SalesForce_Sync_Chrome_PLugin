@@ -49,13 +49,12 @@ cat > "$APP/Contents/Info.plist" <<'PLIST'
 </plist>
 PLIST
 
-cat > "$APP/Contents/MacOS/launcher" <<'LAUNCHER'
-#!/usr/bin/env bash
-# The app lives in the project root, three levels above this script.
-ROOT="$(cd -- "$(dirname -- "$0")/../../.." && pwd)"
-open -a Terminal "$ROOT/start.sh"
-LAUNCHER
-chmod +x "$APP/Contents/MacOS/launcher"
+clang -O2 -arch arm64 -arch x86_64 -mmacosx-version-min=11.0 \
+    -o "$APP/Contents/MacOS/launcher" "$APP_DIR/launcher.c"
+
+# Ad-hoc sign so Gatekeeper doesn't reject the bundle as unsigned. The
+# signature is stored in the bundle's files, so it survives git.
+codesign --force --sign - "$APP"
 
 # Make Finder pick up the new icon.
 touch "$APP"
