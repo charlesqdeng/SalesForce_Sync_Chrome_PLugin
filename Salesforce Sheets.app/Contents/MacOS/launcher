@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# The app lives in the project root, three levels above this script.
+ROOT="$(cd -- "$(dirname -- "$0")/../../.." && pwd)"
+open -a Terminal "$ROOT/start.sh"
