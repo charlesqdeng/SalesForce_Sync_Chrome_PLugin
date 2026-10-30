@@ -11,10 +11,14 @@ Sheet and syncs edited cells back to Salesforce.
    ./start.sh
    ```
 
-   Or double-click **Salesforce Sheets.app** in Finder. It opens a Terminal
-   window and runs `start.sh` for you. The first time, macOS may ask whether to
-   open it; click **Open**. You can drag the app to the Dock for one-click
-   launches, but keep the app itself in this folder.
+   Or double-click **Start Salesforce Sheets.command** in Finder. It opens a
+   Terminal window and runs `start.sh` for you.
+
+   If you downloaded the project as a ZIP, macOS blocks the file the first
+   time ("Not Opened"). Click **Done**, open **System Settings → Privacy &
+   Security**, scroll down to the message about **Start Salesforce
+   Sheets.command**, and click **Open Anyway**. You only need to do this once.
+   Cloning with `git clone` avoids the prompt.
 
    The launcher creates the Python environment, installs the Salesforce and
    browser automation dependencies, opens a dedicated Chrome profile
@@ -46,8 +50,8 @@ Sheet and syncs edited cells back to Salesforce.
 4. Select **Export report to sheet**. Edit the sheet, then select **Sync sheet
    edits to Salesforce** and confirm the preview.
 
-After setup, `./start.sh` (or double-clicking **Salesforce Sheets.app**) is
-the only step needed for each session. The
+After setup, `./start.sh` (or double-clicking **Start Salesforce
+Sheets.command**) is the only step needed for each session. The
 extension, the Salesforce and Google sign-ins, and the configured URLs are
 reused.
 
@@ -96,8 +100,6 @@ reused.
 | File | Purpose |
 |---|---|
 | `start.sh` | One-command Chrome and helper launcher |
-| `Salesforce Sheets.app` | Double-clickable launcher that runs `start.sh` in Terminal |
-| `app/` | Icon drawing and app bundle build script (`app/build_app.sh`) |
 | `launch_chrome.sh` | Starts the dedicated Chrome profile with the extension |
 | `run.sh` | Prepares dependencies and runs the local helper |
 | `extension/` | Chrome Manifest V3 popup and configuration |
